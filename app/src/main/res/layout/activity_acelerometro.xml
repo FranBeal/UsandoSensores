@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AcelerometroActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sensor Acelerômetro"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:paddingBottom="16dp"
+        android:gravity="center_horizontal"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Dados do Acelerômetro (m/s²)"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        android:paddingBottom="8dp" />
+
+    <TextView
+        android:id="@+id/tvX"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Eixo X: 0.0" />
+
+    <TextView
+        android:id="@+id/tvY"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Eixo Y: 0.0" />
+
+    <TextView
+        android:id="@+id/tvZ"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Eixo Z: 0.0" />
+
+</LinearLayout>
