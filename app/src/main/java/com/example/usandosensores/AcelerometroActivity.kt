@@ -68,6 +68,7 @@ class AcelerometroActivity : AppCompatActivity(), SensorEventListener {
             acelerometro,
             SensorManager.SENSOR_DELAY_UI)
     }
+
     override fun onPause(){
         super.onPause()
         sensorManager.unregisterListener(this)

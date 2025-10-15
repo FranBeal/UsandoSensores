@@ -1,6 +1,7 @@
 package com.example.usandosensores
 
 import android.content.Context
+import android.content.Intent
 import android.hardware.Sensor
 import android.hardware.SensorManager
 import android.os.Bundle
@@ -59,7 +60,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun btAceleromentroOnClick() {
-
+        val intent = Intent(this, AcelerometroActivity::class.java)
+        startActivity(intent)
     }
 
     private fun btProxmidadeOnClick() {
