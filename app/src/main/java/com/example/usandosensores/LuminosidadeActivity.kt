@@ -1,6 +1,7 @@
 package com.example.usandosensores
 
 import android.content.Context
+import android.graphics.Color
 import android.hardware.Sensor
 import android.hardware.SensorEvent
 import android.hardware.SensorEventListener
@@ -38,6 +39,32 @@ class LuminosidadeActivity : AppCompatActivity(), SensorEventListener {
     }
 
     override fun onSensorChanged(event: SensorEvent?) {
+        if(event?.sensor?.type == Sensor.TYPE_LIGHT){
+            val vl = event.values[0]
 
+            lumi?.let{ sensor ->
+                val lumiMedia = 500 //ambiente interno
+
+                if(vl >= lumiMedia){ //longe
+                    llTela.setBackgroundColor(Color.WHITE)
+                }else{
+                    llTela.setBackgroundColor(Color.BLACK)
+                }
+            }
+        }
+    }
+
+    override fun onResume(){
+        super.onResume()
+        sensorManager.registerListener(
+            this,
+            lumi,
+            SensorManager.SENSOR_DELAY_UI)
+
+    }
+
+    override fun onPause(){
+        super.onPause()
+        sensorManager.unregisterListener(this)
     }
 }

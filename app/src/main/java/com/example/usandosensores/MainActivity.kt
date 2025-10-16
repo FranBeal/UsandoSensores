@@ -71,6 +71,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun btLuminosidadeOnClick() {
-
+        val intent = Intent(this,
+            LuminosidadeActivity::class.java)
+        startActivity(intent)
     }
 }
