@@ -65,7 +65,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun btProxmidadeOnClick() {
-
+        val intent = Intent(this,
+            ProximidadeActivity::class.java)
+        startActivity(intent)
     }
 
     private fun btLuminosidadeOnClick() {
